@@ -1,0 +1,154 @@
+#sousti, p{
+    text-align: justify;
+}
+
+#boutonn{
+    background-color: #ffc107;
+}
+
+#avi1, #avi2, #avi3, #avi4, #avi5, #avi6{
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 5px solid #ffc107;
+    background-color: rgba(248, 249, 250, 0.5);
+    transition: 1s ease-in-out;
+}
+
+#avi1:hover, #avi2:hover, #avi3:hover, #avi4:hover, #avi5:hover, #avi6:hover{
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 5px solid #212529;
+    background-color: rgba(255, 193, 77, 0.15);
+    transform: translateY(-5px);
+}
+
+#btn1, #btn2, #aa13, #aa14, #aa15{
+    text-decoration: none;
+    color: black;
+}
+
+#a1, #a2, #a3, #a4{
+    text-decoration: none;
+    color: black;
+}
+
+#a1:hover, #a2:hover, #a3:hover, #a4:hover{
+    border-top: none;
+    border-bottom: 2px solid #ffc107;
+    border-left: none;
+    border-right: none;
+    border-radius: 2px;
+}
+
+#image11{
+    transform-origin: center;
+}
+
+#image1{
+    margin-left: 3em;
+    transform-origin: center;
+}
+
+#img2{
+    perspective: 800px;
+}
+
+#image2{
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.imagetel{
+    width: 1.5em;
+    height: auto;
+}
+
+
+/* ==========================================
+   GSAP - OPTIMISATION VISUELLE
+   ========================================== */
+
+#image1,
+#image11,
+#image2,
+.card,
+#contact form {
+    will-change: transform, opacity;
+}
+
+
+/* Les images des cartes restent bien contenues
+   pendant le zoom */
+
+#article .card {
+    overflow: hidden;
+    transform-origin: center center;
+    transition: border-color 0.3s ease;
+}
+
+
+/* L'image ne déborde pas */
+
+#article .card img {
+    display: block;
+    width: 100%;
+    transform-origin: center center;
+}
+
+
+/* Navigation */
+
+.navlinks {
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* Boutons */
+
+.btn {
+    transform-origin: center;
+}
+
+
+/* Image principale */
+
+#image1,
+#image11 {
+    transform-origin: center center;
+}
+
+
+/* Formulaire */
+
+#contact form {
+    transform-origin: center;
+}
+
+
+/* Empêche certains débordements horizontaux
+   provoqués par les animations */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+/* Accessibilité */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
